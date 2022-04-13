@@ -18,7 +18,7 @@
             {
               devShell = pkgs.mkShell {
                 hardeningDisable = [ "all" ];
-                nativeBuildInputs = with pkgs;[ cmake ];
+                nativeBuildInputs = with pkgs;[ cmake pkg-config ];
                 buildInputs = with pkgs;[ gcc git gnumake rustup protobuf3_8 grpc go ];
                 PROTOC = "${pkgs.protobuf3_8}/bin/protoc";
                 shellHook = ''
